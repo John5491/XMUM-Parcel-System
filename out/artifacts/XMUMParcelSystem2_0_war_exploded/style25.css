@@ -1,0 +1,748 @@
+html, body
+{
+	height: 100%;
+	padding:0px;
+    margin: 0px;
+}
+
+/*-----------------------------------------------------------------------------
+                                header_footer
+-------------------------------------------------------------------------------*/
+
+.content-wrap
+{
+    min-height: calc(100% - 80px); /*min height of content is 100% but minus the footer height (so can be seen when less content)*/
+    padding-bottom: 80px; /*add padding between the content and the footer so they dont stick tgt*/
+    overflow: auto;
+}
+
+.header
+{
+    width: 100%;
+    height: 75px;
+    background-color: black;
+    text-align: center;
+}
+
+.title /*xmum parcel system on header*/
+{
+    font-size:30px;
+    color:white;
+    padding-top: 15px;
+}
+
+/* The container <div> - needed to position the dropdown content */
+.dropdown 
+{
+    position: relative;
+    display: inline-block;
+}
+  
+.dropdown_content 
+{
+    display: none; /*hidden by default*/
+    position: absolute; /*dont let them effect the other contents on the header bar when shown (else will run)*/
+    background-color: #292b2c;
+    width: 100%; /*width same as the width of the parent button*/
+    font-size: 20px;
+    text-align: center;
+}
+  
+  /* Links inside the dropdown */
+.dropdown_content a 
+{
+    color: white;
+    padding: 12px 16px;
+    display: block; /*let them look normal as a block*/
+    text-decoration: none; /*remove link pattern*/
+}
+  
+.dropdown_content a:hover 
+{
+    background-color: #1e1f20; /*dropdown list change colour on hover*/
+}
+  
+.dropdown:hover .dropdown_content 
+{
+    display: block; /*dropdown list show on hover*/
+}
+
+ .button
+{
+    background-color: black;
+    border: none;
+    font-size:27px;
+    padding: 11.5px;
+    font-family: "Times New Roman";
+}
+
+.button a, 
+.button_user a, 
+.add a,
+.frame a
+{
+    text-decoration: none;
+    color:white;
+}
+
+.button:hover
+{
+    background-color: #04047C; 
+}
+
+.button_user
+{
+    background-color: #060660;
+    border: none;
+    padding: 11.5px;
+    text-decoration: none;
+    font-size: 20px;
+    color:white;
+    font-family: "Times New Roman";
+}
+
+.button_user:hover
+{
+    background-color: #04047C; 
+}
+
+footer
+{
+    height: 80px; 
+    width: 100%;
+	margin-top: -80px; /*move it up a bit since ald got padding*/
+    bottom: 0; /*always stick to the bottom of page*/
+    text-align:center;
+    background:black;
+    color:white;
+}
+
+.bottomleft
+{
+    position: absolute; /*to position the image inside the footer*/
+    left: 1px;
+}
+
+/*-----------------------------------------------------------------------------
+                                login & register
+-------------------------------------------------------------------------------*/
+.alert
+{
+    animation: transitionInA 0.5s;
+}
+
+.background
+{
+    background-image:url(images/bg.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+.frame
+{
+    width: 60%;
+    border-radius: 25px; /*make the frame round a bit*/
+    background-color: rgba(255, 255, 255, 0.685); /*transparent like background*/
+    overflow: hidden;
+}
+
+.intro /*XMUM PARCEL SYSTEM*/
+{
+    text-align: center;
+    font-size: 50px;
+    color: white;
+    font-family: "Comic Sans MS", cursive, sans-serif;
+    /*set some margin top and bottom*/
+    margin-top: 2%; 
+    margin-bottom: 4%;
+}
+
+/*positioning and style of the content*/
+.frame .login_text
+{
+    margin: 10px auto; 
+    font-size: 1.4em;
+    width: 80%
+}
+
+/*style of text box*/
+.frame .text_holder
+{
+    width: 100%;
+    height: 30px;
+    font-size: 15px;
+    padding: 12px 10px 12px 10px;
+    border: 1px solid #ddd;
+}
+
+/*staff or student button design*/
+.frame .button_type 
+{
+    padding: 5px; 
+    border: none;
+    display: inline-block; 
+    background-color: #060660; 
+    width: 100px;
+    font-size: 1em; 
+    color: white;
+    font-family: "Times New Roman";
+}
+
+/*shadow when hover*/
+.frame .button_type:hover
+{
+    box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19); 
+}
+
+.frame .button_sub_pos /*position of the submit button*/
+{
+    margin: 15px auto; /*center*/
+    width: 450px; 
+    font-size: 1.4em;
+}
+
+/*submit button design*/
+.frame .button_sub,
+.add .button_sub
+{
+    background-color:#060660; 
+    padding: 5px; 
+    width:120px; 
+    font-size:1.2em; 
+    color:white;
+    font-family: "Times New Roman";
+    border: none;
+}
+
+/*change colour when hover*/
+.frame .button_sub:hover,
+.add .button_sub:hover
+{
+    background-color: #04047C; 
+}
+
+/*position of the question in login/register page*/
+.frame .ques_pos
+{
+    margin-top: 55px;
+    margin-left: 20px;
+    width: 350px; 
+    height:30px; 
+    font-size: 20px
+}
+
+/*register/login button*/
+.frame .button_reg
+{
+    font-family: "Times New Roman";
+    border: none;
+    font-size: 20px;
+    color: black;
+    background-color: transparent; /*no background*/
+}
+
+/*used for all pages for positioning*/
+.border 
+{
+    margin: 30px auto; /*middle*/
+    padding: 5px;
+}
+/*-----------------------------------------------------------------------------
+                                    Home
+-------------------------------------------------------------------------------*/
+.track
+{
+    width: 90%; /*how big the content will be*/
+    text-align:center;
+}
+
+.track .text_search
+{
+    width: 400px; /*Width of text box*/
+    height: 30px; /*Height of text box*/
+    margin: 14px auto; /*Position of text box*/
+    font-size: 16px; /* Increase font-size of text*/
+    padding: 20px 25px 20px 40px; /* Add some padding inside the text box*/
+    border: 1px solid #ddd; /* Add a grey border */
+    font-size: 1.1em;
+    border-radius: 25px;
+}
+
+.track .button_search
+{
+    padding: 5px; 
+    border: none;
+    border-radius: 25px;
+    display: inline-block; 
+    background-color: #292b2c;
+    width: 100px;
+    font-size: 1.2em; 
+    color: white;
+    font-family: "Times New Roman";
+    margin: 5px;
+}
+
+.track .button_search:hover
+{
+    box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+    background-color: #1e1f20;
+}
+
+.track .button_choice
+{
+    background-color: #bacaf5;
+    padding: 5px;
+    border: none;
+    font-size:18px;
+    font-family: "Times New Roman";
+}
+
+.track .button_choice:hover
+{
+    background-color: #a9bdf5; 
+}
+
+.track a,
+.track .button_choice a
+{
+    text-decoration: none;
+    color: black;
+}
+
+.track2 .Your_title,
+.track .Your_title
+{
+    font-size: 1.5em; 
+    padding: 5px; 
+    text-align: left;
+}
+
+/*-----------------------------------------------------------------------------
+                                    Tracking
+-------------------------------------------------------------------------------*/
+.add
+{
+    width: 90%;
+}
+
+/*add new tracking big title*/
+.add .main_title 
+{
+    font-size: 1.5em;
+    padding: 5px;
+    color: #060660;
+    text-align: center;
+}
+
+.track2
+{
+    width: 90%;
+    top: 40%;
+    text-align:center;
+}
+
+.text
+{
+    width: 300px; /*Width of text box*/
+    height: 20px; /*Height of text box*/
+    font-size: 16px; /* Increase font-size of text*/
+    padding: 12px 20px 12px 10px; /* Add some padding inside the text box*/
+    border: 1px solid #ddd; /* Add a grey border */
+    border-radius: 25px;
+}
+
+.highlight
+{
+    animation: transitionOutH 5s;
+}
+
+
+/*-----------------------------------------------------------------------------
+                                    Forum
+-------------------------------------------------------------------------------*/
+.forum
+{
+    width: 90%;
+    min-height: 65%;
+}
+
+/*left author*/
+.forum .writer
+{
+    display: inline-block;
+    width: 20%;
+    border-right: 2px solid black;
+}
+
+/*right question*/
+.forum .question
+{
+    display: inline-block;
+    width: 79%;
+    min-height: 37%;
+}
+
+/*right question title*/
+.forum .forum_title
+{
+    width: 100%;
+    height: 10%;
+    font-weight: 900;
+    font-size: 20px;
+    border-bottom: 2px solid black; /*borderline between content n title*/
+}
+
+/*right question content*/
+.forum .forum_content
+{
+    font-size: 15px;
+    width: 100%;
+}
+
+.forum .forum_text
+{
+    width: 100%;
+    font-size: 15px;
+    padding: 5px 10px 5px 10px;
+    border: 1px solid #ddd;
+    text-align: top;
+}
+
+/*submit button*/
+.forum .forum_button
+{
+    background-color: #ebebeb;
+    padding: 5px; 
+    border: none;
+    font-size: 15px; 
+    font-family: "Times New Roman";
+}
+
+.forum .forum_button:hover
+{
+    background-color: #d8d5d5; 
+}
+
+.forum .forum_button a
+{
+    text-decoration: none;
+    color: black;
+}
+/*-----------------------------------------------------------------------------
+                                    Notice
+-------------------------------------------------------------------------------*/
+.notice
+{
+    width: 80%;
+    text-align: center;
+    border: 2px solid #060660;
+}
+/*-----------------------------------------------------------------------------
+                                    Settings
+-------------------------------------------------------------------------------*/
+/*----Profile part (left side)----*/
+.profile 
+{
+    width: 15%;
+    height: 65%;
+    background-color: #eeeaea5b;
+    display: inline-block;
+    float: left;
+    border-radius: 25px;
+    margin: 50px 20px auto;
+    padding: 2px
+}
+
+.forum .profile_pic,
+.profile .profile_pic 
+{
+    width: 150px;
+    height: 150px;
+    border-radius: 50%; /*make it round*/
+}
+
+.profile .button
+{
+    background-color: #ebebeb;
+    border: none;
+    font-size:25px;
+    width: 90%;
+    padding: 11.5px;
+    font-family: "Times New Roman";
+}
+
+.profile .button:hover
+{
+    background-color: #d8d5d5; 
+}
+
+.profile .button a
+{
+    text-decoration: none;
+    color: black;
+}
+
+/*----Setting part (right side)----*/
+.settings
+{
+    width: 81%;
+    min-height: 65%;
+    border-radius: 25px;
+    float: right; /*move to the side of the page*/
+    background-color: #eeeaea5b;
+    margin: 50px 20px 50px auto;
+}
+
+.settings .selection 
+{
+    width: 11%;
+    min-height: 65%;
+    float: left; /*left side of the box*/
+    padding: 25px 0px 0px 5px;
+}
+
+.settings .edit
+{
+    width: 88%;
+    min-height: 65%;
+    float: right; /*right side of the box*/
+    padding: 16px;
+    border-left: 2px solid #c4c2c2;
+    overflow-x: auto;
+}
+
+.settings .button
+{
+    background-color: #ebebeb;
+    border: none;
+    font-size:15px;
+    width: 95%;
+    padding: 11.5px;
+    font-family: "Times New Roman";
+}
+
+.settings .button:hover
+{
+    background-color: #d8d5d5; 
+}
+
+.settings .button a
+{
+    text-decoration: none;
+    color: black;
+}
+
+.settings .small_pic 
+{
+    width: 70px;
+    height: 70px;
+}
+
+.settings .edit_font
+{
+    font-size:20px;
+}
+
+.settings .og_data
+{
+    width: 80%;
+    height: 30px;
+    font-size: 15px;
+    padding: 12px 20px 12px 10px;
+    border: 1px solid #ddd;
+}
+
+.settings .button_save
+{
+    background-color: #ebebeb;
+    border: none;
+    font-size:15px;
+    padding: 11.5px;
+    font-family: "Times New Roman";
+}
+
+.settings .button_save:hover
+{
+    background-color: #d8d5d5; 
+}
+
+.settings .button_save a
+{
+    text-decoration: none;
+    color: black;
+}
+
+.settings .subtitles
+{
+    font-size: 1.5em; 
+    padding: 5px; 
+    color: black;
+    text-align: center;
+}
+
+/*prevent access*/
+.refrain
+{
+    padding: 50px;
+    color: red;
+    font-size: 3em;
+    text-align: center;
+}
+
+.track .button_table,
+.track2 .button_table,
+.add .button_table,
+.settings .button_table
+{
+    border: none;
+    font-weight: bold;
+    background-color: transparent;
+    color: black;
+    font-family: "Times New Roman";
+    font-size: 1em;
+}
+
+.track .button_table:hover,
+.track2 .button_table:hover,
+.add .button_table:hover,
+.settings .button_table:hover
+{
+    text-decoration: underline;
+}
+
+/*-----------------------------------------------------------------------------
+                                    Animations
+-------------------------------------------------------------------------------*/
+@keyframes transitionInA /*fade in*/
+{
+    from
+    {
+        opacity: 0;
+    }
+    to
+    {
+        opacity: 1;
+    }
+}
+
+@keyframes transitionOutH /*fade from yellow to transparent for pending parcels*/
+{
+    from
+    {
+        background-color: yellow;
+    }
+
+    to
+    {
+        background-color: transparent;
+    }
+}
+
+/*-----------------------------------------------------------------------------
+                                    AddOn
+-------------------------------------------------------------------------------*/
+.homeBG
+{
+    background-image: url("images/homeb.png");
+    max-height: 100%;
+    max-width: 100%;
+    background-repeat: no-repeat;
+    padding-bottom: 210px; border-radius: 50px
+}
+
+.profileIcon
+{
+    width: 75px; height: 75px; border-radius: 50%; margin-right: 50px; margin-left: 50px; margin-top:20px
+}
+
+.homeTitle
+{
+    font-size: 5em; text-align: center; color: white; margin-top: 30px
+}
+
+.homeSubtitle
+{
+    text-align: center; color: white; margin-top: 60px; margin-bottom: 30px
+}
+
+.homeButton
+{
+    color: white;
+    background-color: transparent;
+    border: none;
+}
+
+.addParcelBg
+{
+    background-image: url("images/addparcelbg.png");
+    max-height: 100%;
+    max-width: 100%;
+    background-repeat: no-repeat;
+    border-radius: 25px;
+    padding: 33px 115px 66px 0px;
+    margin: 70px 100px 50px;
+}
+
+.addParcelform
+{
+    font-size: 1.5em;
+    padding: 15px 0px 5px 80px;
+    color: white;
+}
+
+.adminhomebg
+{
+    background-image: url("images/adminhomebg1.png");
+    max-height: 100%;
+    max-width: 100%;
+    background-repeat: no-repeat;
+    border-radius: 25px;
+    padding: 117px 115px 114px 80px;
+}
+
+.right_side
+{
+    padding-top: 65px;
+    padding-right: 20px;
+    float: right;
+    width:50%;
+    text-align: center;
+    height: 270px;
+}
+
+.left_side
+{
+    float: left;
+    width: 45%;
+    height: 270px;
+}
+
+.loginBG
+{
+    background-image: url("images/xmum2.jpg"); /*xmum image*/
+    border-top-left-radius: 25px;
+    background-repeat: no-repeat;
+    background-size: contain;
+    height: 217%;
+    width: 100%;
+    background-size: cover;
+}
+
+.background
+{
+    background-image:url("images/bg.jpg"); /*black bg*/
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+.adminstudentbg
+{
+    background-image: url("images/student2.png");
+    max-height: 100%;
+    max-width: 100%;
+    background-repeat: no-repeat;
+    border-radius: 25px;
+    padding: 117px 115px 100px 80px;
+}
